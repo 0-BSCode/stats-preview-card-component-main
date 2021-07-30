@@ -1,0 +1,373 @@
+/*---------- STYLE VARIABLES ----------*/
+
+:root {
+    --dark_blue: hsl(233, 47%, 7%);
+    --desaturated_blue: hsl(244,38%,16%);
+    --soft_violet: hsl(277, 64%, 61%);
+    --main_par_white: hsla(0, 0%, 100%, 0.75);
+    --stat_heading_white: hsla(0, 0%, 100%, 0.6);
+    --font-size: 15px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca&display=swap');
+
+/*---------- GENERAL DECLARATIONS ----------*/
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+body {
+    background: var(--dark_blue);
+    font-family: sans-serif;
+    color: white;
+}
+
+div.card {
+    display: none;
+    width: 80%;
+    margin: 50px auto;
+    background: var(--desaturated_blue);
+    border-radius: 15px;
+}
+
+div.card-grid {
+    width: 80%;
+    margin: 100px auto;
+    color: white;
+    background: var(--desaturated_blue);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+}
+
+/*---------- TEXT CONTENT ----------*/
+
+div.text-wrapper {
+    width: 80%;
+    margin: auto;
+    font-size: 10px;
+}
+
+div.text-wrapper h2 {
+    /* padding-top: 25px; */
+    padding-top: 8%;
+    font-weight: 400;
+    font-size: 135%;
+    /* font-size: 11px; */
+    color: var(--main_par_white);
+    line-height: 25px;
+}
+
+div.text-wrapper h1 {
+    font-size: 300%;
+    /* font-size: 26px; */
+}
+
+div.text-wrapper span {
+    color: var(--soft_violet);
+}
+
+div.text-wrapper ul.statistics-wrapper {
+    list-style-type: none;
+    /* padding-top: 30px; */
+    padding-top: 13%;
+}
+
+div.text-wrapper ul.statistics-wrapper li {
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.text-wrapper ul.statistics-wrapper li h3 {
+    /* font-size: 20px; */
+    font-size: 250%;
+}
+
+div.text-wrapper ul.statistics-wrapper li p {
+    /* font-size: 7px; */
+    font-size: 83%;
+    line-height: 20px;
+    color: var(--stat_heading_white);
+    letter-spacing: 2px;
+}
+
+
+/*---------- IMAGE CONTENT ----------*/
+
+div.card-grid div.img-element {
+    background: var(--soft_violet);
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+div.card-grid div.img-element img {
+    display: block;
+    width: 100%;
+    filter: opacity(0.4);
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+
+/*---------- MEDIA QUERIES ----------*/
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+
+    div.card-grid {
+        width: 85%;
+    }
+
+    
+    /*----- CARD TEXT -----*/  
+
+    div.text-wrapper h1 {
+        font-size: 255%;
+    }
+
+    div.text-wrapper h2 {
+        font-size: 110%;
+        line-height: 18px;
+    }
+
+    div.text-wrapper ul.statistics-wrapper {
+        padding-top: 10%;
+    }
+
+    div.text-wrapper ul.statistics-wrapper li h3 {
+        font-size: 220%;
+    }
+
+    div.text-wrapper ul.statistics-wrapper li p {
+        font-size: 70%;
+        letter-spacing: 1px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    div.card-grid {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 2.2fr;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    
+    /*----- CARD TEXT -----*/ 
+
+    div.text-wrapper {
+        order: 2;
+        height: 90%;
+        padding-top: 10%;
+    }
+
+    div.text-wrapper h1 {
+        font-size: 330%;
+        text-align: center;
+    }
+
+    div.text-wrapper h2 {
+        font-size: 210%;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    div.text-wrapper ul.statistics-wrapper {
+        padding-top: 15%;
+    }
+
+    div.text-wrapper ul.statistics-wrapper li {
+        display: block;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 10%;
+    }
+
+    div.text-wrapper ul.statistics-wrapper li h3 {
+        font-size: 320%;
+    }
+
+    div.text-wrapper ul.statistics-wrapper li p {
+        font-size: 130%;
+        letter-spacing: 3px;
+    }
+
+
+    /*----- CARD IMAGE -----*/
+    
+    div.card-grid div.img-element {
+        order: 1;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: inherit;
+    }
+
+    div.card-grid div.img-element img {
+        border-radius: inherit;
+    }
+
+}
+
+@media only screen and (min-width: 368px) and (max-width: 479px) {
+
+    div.card-grid {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 2.3fr;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    
+    /*----- CARD TEXT -----*/ 
+
+    div.text-wrapper {
+        order: 2;
+        height: 90%;
+    }
+
+    div.text-wrapper h1 {
+        font-size: 258%;
+        text-align: center;
+    }
+
+    div.text-wrapper h2 {
+        font-size: 160%;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    div.text-wrapper ul.statistics-wrapper {
+        padding-top: 15%;
+    }
+
+    div.text-wrapper ul.statistics-wrapper li {
+        display: block;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 10%;
+    }
+
+    div.text-wrapper ul.statistics-wrapper li h3 {
+        font-size: 280%;
+    }
+
+    div.text-wrapper ul.statistics-wrapper li p {
+        font-size: 105%;
+        letter-spacing: 2px;
+    }
+
+
+    /*----- CARD IMAGE -----*/
+    
+    div.card-grid div.img-element {
+        order: 1;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: inherit;
+    }
+
+    div.card-grid div.img-element img {
+        border-radius: inherit;
+    }
+}
+
+
+/*---------- MISCELLANEOUS QUERIES ----------*/
+
+/* Update size of grid columns to remove empty space */
+
+@media only screen and (min-width: 520px) and (max-width: 600px) {
+    
+    div.card-grid {
+        grid-template-rows: 1fr 1.8fr;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+    
+    div.card-grid {
+        grid-template-rows: 1fr 1.6fr;
+    }
+
+}
+
+
+
+/*---------- CARD CONTENT ----------*/
+
+div.text-content-wrapper, div.header-image {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+}
+
+div.text-content {
+    width: 70%;
+    margin: auto;
+    padding-top: 12%;
+}
+
+div.text-content h1 {
+    font-size: 26px;
+}
+
+div.text-content h2 {
+    padding-top: 25px;
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--main_par_white);
+    line-height: 25px;
+}
+
+div.text-content h1 span {
+    color: var(--soft_violet);
+}
+
+div.text-content ul.stats-wrapper {
+    list-style-type: none;
+    padding-top: 30px;
+}
+
+div.text-content ul.stats-wrapper li {
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.text-content ul.stats-wrapper li h3 {
+    font-size: 20px;
+}
+
+div.text-content ul.stats-wrapper li p {
+    font-size: 7px;
+    line-height: 20px;
+    color: var(--stat_heading_white);
+    letter-spacing: 3px;
+}
+
+div.header-image {
+    margin-left: 3.46%;
+    background: var(--soft_violet);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+div.header-image img {
+    display: block;
+    border-radius: inherit;
+    width: 100%;
+    filter: opacity(0.4);
+}
+
+
+
+
