@@ -26,15 +26,7 @@
 body {
     background: var(--dark_blue);
     font-family: sans-serif;
-    color: white;
-}
-
-div.card {
-    display: none;
-    width: 80%;
-    margin: 50px auto;
-    background: var(--desaturated_blue);
-    border-radius: 15px;
+    color: white; 
 }
 
 div.card-grid {
@@ -299,75 +291,3 @@ div.card-grid div.img-element img {
     }
 
 }
-
-
-
-/*---------- CARD CONTENT ----------*/
-
-div.text-content-wrapper, div.header-image {
-    display: inline-block;
-    vertical-align: top;
-    width: 48%;
-}
-
-div.text-content {
-    width: 70%;
-    margin: auto;
-    padding-top: 12%;
-}
-
-div.text-content h1 {
-    font-size: 26px;
-}
-
-div.text-content h2 {
-    padding-top: 25px;
-    font-weight: 400;
-    font-size: 11px;
-    color: var(--main_par_white);
-    line-height: 25px;
-}
-
-div.text-content h1 span {
-    color: var(--soft_violet);
-}
-
-div.text-content ul.stats-wrapper {
-    list-style-type: none;
-    padding-top: 30px;
-}
-
-div.text-content ul.stats-wrapper li {
-    width: 32%;
-    display: inline-block;
-    vertical-align: top;
-}
-
-div.text-content ul.stats-wrapper li h3 {
-    font-size: 20px;
-}
-
-div.text-content ul.stats-wrapper li p {
-    font-size: 7px;
-    line-height: 20px;
-    color: var(--stat_heading_white);
-    letter-spacing: 3px;
-}
-
-div.header-image {
-    margin-left: 3.46%;
-    background: var(--soft_violet);
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-div.header-image img {
-    display: block;
-    border-radius: inherit;
-    width: 100%;
-    filter: opacity(0.4);
-}
-
-
-
-
