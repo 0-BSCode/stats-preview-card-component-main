@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca&display=swap');
+
 /*---------- STYLE VARIABLES ----------*/
 
 :root {
@@ -9,7 +11,6 @@
     --font-size: 15px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca&display=swap');
 
 /*---------- GENERAL DECLARATIONS ----------*/
 
@@ -47,28 +48,27 @@ div.text-wrapper {
     font-size: 10px;
 }
 
+
+div.text-wrapper h1 {
+    font-size: 300%;
+    font-family: 'Lexend Deca';
+}
+
 div.text-wrapper h2 {
-    /* padding-top: 25px; */
     padding-top: 8%;
     font-weight: 400;
     font-size: 135%;
-    /* font-size: 11px; */
+    font-family: 'Inter';
     color: var(--main_par_white);
     line-height: 25px;
 }
 
-div.text-wrapper h1 {
-    font-size: 300%;
-    /* font-size: 26px; */
-}
-
-div.text-wrapper span {
+div.text-wrapper h1 span {
     color: var(--soft_violet);
 }
 
 div.text-wrapper ul.statistics-wrapper {
     list-style-type: none;
-    /* padding-top: 30px; */
     padding-top: 13%;
 }
 
@@ -79,13 +79,13 @@ div.text-wrapper ul.statistics-wrapper li {
 }
 
 div.text-wrapper ul.statistics-wrapper li h3 {
-    /* font-size: 20px; */
     font-size: 250%;
+    font-family: 'Inter';
 }
 
 div.text-wrapper ul.statistics-wrapper li p {
-    /* font-size: 7px; */
     font-size: 83%;
+    font-family: 'Lexend Deca';
     line-height: 20px;
     color: var(--stat_heading_white);
     letter-spacing: 2px;
